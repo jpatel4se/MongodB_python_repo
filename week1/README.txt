@@ -1,4 +1,4 @@
-Video - What is MongodB
+#What is MongodB
 Mongodb 
 •	is non-relational datastore for json documents.
 •	non relational means "it doesnt store data in tables", like relation db does.
@@ -16,7 +16,7 @@ Quiz: What is MongoDB?
 Which of the following statements are true about MongoDB?
  MongoDB is document oriented. MongoDB supports Joins. MongoDB is schemaless MongoDB supports SQL.
  
-Video- Mongo Relative to Relational 
+#Mongo Relative to Relational 
 
  
 
@@ -38,7 +38,8 @@ Which features did MongoDB omit in order to retain scalability?
 
 
 
-Video - Overview of building an app with mongodB
+
+#Overview of building an app with mongodB
 
  
 •	Mongod is database server running on a box.
@@ -46,7 +47,7 @@ Video - Overview of building an app with mongodB
 •	On http server, we are going to use python.
 •	We will be using python bottle framework and py-mongo which will help us connect to mongodB.
  
-Quick Introduction to Mongo Shell
+#Quick Introduction to Mongo Shell
 
  
 
@@ -54,7 +55,7 @@ Which of the following expressions are valid JSON documents?
  {a:1, b:2, c:3} {a,1; b,4, c,6} {a:1; b:1; c:4} (A,1; b:2; c,4}
 
  
-Json Introduced
+#Json Introduced
 
 Adding json array inside a json object
 
@@ -68,7 +69,7 @@ Which of the following are valid JSON documents?
  {a:1, b:{}, c: [ { a:1, b:2}, 5, 6]}
  { }
  
-Install Mongodb Windows
+#Install Mongodb Windows
 
  
 mongod.ex : database
@@ -144,12 +145,12 @@ To drop the table, uses db.tablename.drop().
 > db.users.find()
 { "_id" : ObjectId("504f45cd17f6c778042c3c07"), "password" : "hello123", "username" : "mkyong" }
  
-Video - Installing Python windows
+#Installing Python windows
 
 Add " D:\Program Files (x86)\Python33;" to "Path" in "Environment Variable"
  
  
-Video - Installing Bottle python web framework
+#Installing Bottle python web framework
 
 1. Download and install file by running "ez_setup.py" (http://bottlepy.org/docs/0.11/)
 2. Install Bottle framework
@@ -157,7 +158,7 @@ D:\Program Files (x86)\Python33\Scripts>easy_install.exe -U bottle
 Searching for bottle
 Reading https://pypi.python.org/simple/bottle/
 Best match: bottle 0.11.6
-Downloading https://pypi.python.org/packages/source/b/bottle/bottle-0.11.6.tar.gz#md5=0bafdc4e13ea2b1a3bddf36b5af108c4
+Downloading https://pypi.python.org/packages/source/b/bottle/bottle-0.11.6.tar.gzmd5=0bafdc4e13ea2b1a3bddf36b5af108c4
 Processing bottle-0.11.6.tar.gz
 Writing c:\users\jpatel\appdata\local\temp\easy_install-bhln29\bottle-0.11.6\setup.cfg
 Running bottle-0.11.6\setup.py -q bdist_egg --dist-dir c:\users\jpatel\appdata\local\temp\easy_install-bhln29\bottle-0.1
@@ -189,7 +190,7 @@ Output
 http://localhost:8080/hello/jaishriram
 jaishriram
  
-Video - Installing PyMongo
+#Installing PyMongo
 
 Output
 D:\Program Files (x86)\mongodb-2.4.4\data\education\m101P\week1\lesson_files>python python_getting_started.py
@@ -200,11 +201,11 @@ Python code
 
 import pymongo
 from pymongo import MongoClient
-#connect to dB
+connect to dB
 connection = MongoClient('localhost', 27017)
-#localhost: name of dB
+localhost: name of dB
 dB = connection.localhost
-#users: name of collection inside "databse: localhost"
+users: name of collection inside "databse: localhost"
 users = dB.users
 item = users.find_one()
 print( item['username'] )
@@ -215,7 +216,7 @@ dB
 { "_id" : ObjectId("51ca5081c0df442471537436"), "password" : "hello123", "username" : "mkyong" }
 { "_id" : ObjectId("51cce7bfa75b499eed37dfd5"), "username" : "google", "password" : "google123" }
  
-Video - Hello World Mongo Style
+#Hello World Mongo Style
 
 Return a Single Document from a Collection
 With the db.collection.findOne() method you can return a single document from a MongoDB collection. The findOne() method takes the same parameters as find(), but returns a document rather than a cursor.
@@ -285,7 +286,7 @@ function ( obj ){
 
 
  
-Video - Hello World on Server
+#Hello World on Server
 
 Pymongo communicates with mongod using BSON
  
@@ -320,7 +321,7 @@ def index():
 bottle.run(host='localhost', port=8082)
 
  
-Video - Mongo is Schemaless
+#Mongo is Schemaless
 
 Each row can follow any schema
 	Update an object
@@ -376,7 +377,7 @@ Dont care to remeber
 
 
  
-Video - JSON revisited
+#JSON revisited
 
 Json has only 2 data structures
 Top level has to be dictionary
@@ -429,7 +430,7 @@ post_tags
 	tag_id
 In order to display a blog post with its comments and tags, how many tables will need to be accessed?
  2 3 5 6
-Video - Modeling our Blog in Mongo
+#Modeling our Blog in Mongo
 Given the document schema that we proposed for the blog, how many collections would we need to access to display the blog home page?
  0 1 2 4
 Quiz: Intro to Schema Design 
@@ -438,7 +439,7 @@ In which scenario is it impossible to embed data within a document (you must put
  
 Quiz - intro to python
 •	Python is readable, helps with GC and can be dynamically typed.
-Video -python Lists
+#python Lists
 python list are like json list
 
 >>> a = ['apple1', "apple2", 'apple3']
@@ -475,7 +476,7 @@ Integers doesn't need any quotes
 Write the code to initialize a list with the items "hammer", "nail" and "wall" and assign the list to the variable named "things". 
 things = ["hammer","nail","wall"]
  
-Video - Python lists, Manipulating
+#Python lists, Manipulating
 
 >>> c
 [1, ['apple1', 'apple2'], 3]
@@ -497,7 +498,7 @@ duce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__',
 Write the code to append the item "hammer" onto a list named things. Please use double quotes at this time.
 
 things.append("hammer")
-Video - Python Lists, Slice Operator
+#Python Lists, Slice Operator
 
 
 >>> a=["One", "Two", "Three", "Four", "Five"]
@@ -532,7 +533,7 @@ Quiz:
 things = ['apples', 'orange', 'pear', 'grape', 'kiwi']. What is the slice notation that will return the sublist ['orange', 'pear']? 
 things[1:3]
  
-Video - Python lists, Inclusion
+#Python lists, Inclusion
 
 >>> a
 ['One', 'Two', 'Three', 'Four', 'Five']
@@ -560,7 +561,7 @@ Quiz
 given a python list called "fruit", write an if statement to check whether "apple" is in the list. 
 Please use double quotes at this time.
 if "apple" in fruit":  
-Video - Python Dicts / Dictionary
+#Python Dicts / Dictionary
 Note: Python does not retain order inside dictionary.
 
 Dictionary example
@@ -596,7 +597,7 @@ Quiz
 Initialize a new dict named "colors" with the following key values pairs: sky is blue, sea is blue. earth is brown. Note: Please preserve the order of these keys when you enter your answer.
 colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}
  
-Video - Dicts and Lists together
+#Dicts and Lists together
 
 Mix
 
@@ -618,9 +619,9 @@ Mix
 
 Initialize a new dict with a single key, "animals" whose value is the list "dog", "cat", "zebra" and assign the entire expression to variable named "things"
 things={"animals":["dog", "cat", "zebra"]}
-Video -Python for loop with lists
+#Python for loop with lists
 
-#Initialize array
+Initialize array
 array1 = ['One', 'Two', 'Three'] 
 array2 = []
 
@@ -648,10 +649,10 @@ print i
 8
 
  
-Video - Python for loops with dicts
+#Python for loops with dicts
 
 
-#Initialize dictionary
+Initialize dictionary
 person={'name':'hiral', 'favourite_color':"red", "hair":"black"}
 
 print(person)
@@ -674,7 +675,7 @@ for item in people:
 
 red
 
-Video - Python: Combining Dicts and Lists
+#Python: Combining Dicts and Lists
 
 Code
 person={'name':'hiral', 
@@ -713,10 +714,10 @@ print sum
 9
 
  
-Video Python - while loop
+#Python - while loop
 i++ is not legal in python
 
-#Initialize array
+Initialize array
 array1 = ['One', 'Two', 'Three'] 
 
 i = 0
@@ -725,14 +726,14 @@ while(i < len(array1)):
 	i = i+1
 
 
-Video - Python function calls
+#Python function calls
 In python, every function name starts with "def functionName (args):"
-#Initialize array
+Initialize array
 array1 = ['One', 'Two', 'Three', 'One', 'Four', 'Three', 'One', 'Two']
 
 def analyze_list(list): 
 	
-	#Initialize dictionary
+	Initialize dictionary
 	counts_of_each_instance = {}
 	
 	for item in list:
@@ -750,7 +751,7 @@ o/p
 {'Three': 2, 'One': 3, 'Four': 1, 'Two': 2}
 
  
-Python - Exception Handling
+#Python - Exception Handling
 
 import sys
 try:
@@ -764,7 +765,7 @@ print("but life goes on")
 
 exception  <class 'ZeroDivisionError'>
 but life goes on
-Video - Bottle framework: URL Handler
+#Bottle framework: URL Handler
 
 import bottle
 
@@ -780,7 +781,7 @@ bottle.debug(true);
 bottle.run(host='localhost', port=8082)
 
  
-Video - Bottle framework: using views
+#Bottle framework: using views
 
 Output
 Welcome Andrew 
@@ -798,9 +799,9 @@ import bottle
 @bottle.route('/')
 def homepage():
 	mythings = ['apple','baanananana','orange','peach']
-	#return bottle.template('view_python_bottle_viewController', usernameInHtml="Andrew", thingsInHtml=mythings) - APPROACH 1
+	return bottle.template('view_python_bottle_viewController', usernameInHtml="Andrew", thingsInHtml=mythings) - APPROACH 1
 	
-	# passing parameter in DICTIONARY
+	 passing parameter in DICTIONARY
 	return bottle.template('view_python_bottle_viewController',{'usernameInHtml':"Andrew", 'thingsInHtml':mythings}) - APPROACH2
 		
 bottle.debug(True);
@@ -826,7 +827,7 @@ view_python_bottle_viewController.tpl
 </html>
 
  
-Video - Bottle framework: Handling form content
+#Bottle framework: Handling form content
 
 POST method
 Welcome Andrew 
@@ -845,7 +846,7 @@ import bottle
 @bottle.route('/')
 def homepage():
 	mythings = ['apple','baanananana','orange','peach']	
-	# passing parameter in DICTIONARY
+	 passing parameter in DICTIONARY
 	return bottle.template('form_post',{'usernameInHtml':"Andrew", 'thingsInHtml':mythings})
 	
 @bottle.post('/favourite_fruit')
@@ -895,7 +896,7 @@ bottle.run(host='localhost', port=8082)
 
 
  
-Video - Bottle framework: using cookies
+#Bottle framework: using cookies
 
 
 import bottle
@@ -904,7 +905,7 @@ import bottle
 def homepage():
 	mythings = ['apple','baanananana','orange','peach']
 	
-	# passing parameter in DICTIONARY
+	 passing parameter in DICTIONARY
 	return bottle.template('form_post',{'usernameInHtml':"Andrew", 'thingsInHtml':mythings})
 	
 @bottle.post('/favourite_fruit')
@@ -927,7 +928,7 @@ bottle.run(host='localhost', port=8082)
 
 
  
-Video - saving data - (pymongo driver)
+#saving data - (pymongo driver)
 
 Output
 
@@ -960,7 +961,7 @@ def main():
 main()
 
  
-Video - Pymongo exception processing
+#Pymongo exception processing
 
 Output 1
 
@@ -1019,9 +1020,7 @@ Change required
 
 
 
-
-
-Homework: Homework 1.1 
+#Homework: Homework 1.1 
 Install MongoDB on your computer and run it on the standard port. 
 Download the HW1 tarball (mac) or zipfile (windows), expand it as follows: 
 Mac Users 
