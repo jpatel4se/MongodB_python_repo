@@ -9,7 +9,8 @@ Delete = remove
 
 ##Mongo shell is interactive javascript interpreter.
 <pre><code>
-> for (i=0; i<3; i++) print("hello");
+for (i=0; i<3; i++)
+print("hello");
 hello
 hello
 hello
