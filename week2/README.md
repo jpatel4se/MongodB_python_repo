@@ -8,13 +8,13 @@ Delete = remove
 #Secrets of Mongo Shell
 
 ##Mongo shell is interactive javascript interpreter.
-<code>
+<p>
 for (i=0; i<3; i++)
 print("hello");
 hello
 hello
 hello
-</code>
+</p>
 
 
 
